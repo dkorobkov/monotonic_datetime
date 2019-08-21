@@ -1,0 +1,4 @@
+#!/bin/sh
+date +%Y%m%d >/var/time/shutdowndate.txt
+date +%H%M >/var/time/shutdowntime.txt
+echo 'Shutting down' >> /var/time/startup

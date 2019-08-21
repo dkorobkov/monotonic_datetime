@@ -1,0 +1,7 @@
+#!/bin/sh
+/bin/date >> /var/time/startup
+/bin/date --set `cat /var/time/shutdowndate.txt`
+/bin/date --set `cat /var/time/shutdowntime.txt`
+echo 'After setting' >>/var/time/startup
+/bin/date >> /var/time/startup
+/home/user/workspace/masya/scripts/autocopy.sh >/dev/null 2>&1 &

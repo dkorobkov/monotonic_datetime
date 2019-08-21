@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Scripts at Start and Stop
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/root/on_startup
+#your paths and filenames
+ExecStop=/root/on_shutdown
+
+[Install]
+WantedBy=multi-user.target
